@@ -41,7 +41,7 @@ img {
   background: url("../img/headerline.svg") no-repeat;
   background-size: 100% 200px;
   color: #FFFFFF;
-  background-position: bottom;
+  background-position: top;
   z-index: 20;
 }
 .main-header__inner {
@@ -205,7 +205,7 @@ img {
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  margin-top: 21px;
+  margin-top: 40px;
 }
 .main-nav__text-hidden {
   position: absolute;
@@ -788,8 +788,10 @@ img {
   margin-bottom: 36px;
   margin-top: 40px;
 }
-.reviews__item a::after {
-  content: "";
+.reviews__autor-wrapper {
+  position: relative;
+}
+.reviews__img {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -798,18 +800,16 @@ img {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("../img/reviews/profile.svg");
-  background-size: 30px;
+  overflow: hidden;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
-.reviews__item--vladimir a::after {
-  background-image: url("../img/reviews/vladimir.jpg");
-  background-size: 70px;
-}
-.reviews__item--elena a::after {
-  background-image: url("../img/reviews/elena.jpg");
-  background-size: 50px;
+.reviews__img img {
+  width: 50px;
 }
 .reviews__btn {
   width: 50px;
