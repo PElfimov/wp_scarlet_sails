@@ -774,6 +774,7 @@ img {
   margin: 10px;
   max-width: 196px;
   min-width: 196px;
+  position: relative;
 }
 .reviews__item a {
   display: block;
@@ -791,25 +792,15 @@ img {
 .reviews__autor-wrapper {
   position: relative;
 }
-.reviews__img {
+.reviews__item img {
   position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 50% 50%;
   background-color: #06466F;
-  left: 0;
-  top: 50%;
+  left: 10px;
+  bottom: 8px;
   transform: translate(0, -50%);
-  overflow: hidden;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.reviews__img img {
-  width: 50px;
 }
 .reviews__btn {
   width: 50px;
