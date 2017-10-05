@@ -13,11 +13,11 @@
         if ($i % 3 == 0) // false, 13%5=3
         {
             $b=$i/3;
-            echo $b;
+
         }
         else
         {   $b=intval($i/3)+1;
-            echo $b;
+
           }?>
         <button class="reviews__btn btn-reviews btn-reviews--blue-left" type="button" onclick="move(this, '.reviews', 'left', 708, <?php echo $b;?>);" disabled="disabled"></button>
         <div class="reviews__wrapper">
@@ -28,8 +28,7 @@
             ?>
             <li class="reviews__item">
               <?php the_content();
-              echo $b;
-              echo $i;?>
+              ?>
 
             </li>
             <?php endwhile; ?>
