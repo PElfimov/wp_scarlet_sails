@@ -17,5 +17,10 @@ Template Name: Главная страница
 	</section>
 	<?php include(TEMPLATEPATH . '/reviews.php'); ?>
 </main>
-
+<?php
+$id = 142; // id страницы
+$post = get_page($id);
+$content = $post->post_content;
+echo $post->post_content;
+?>
 <?php get_footer(); ?>
