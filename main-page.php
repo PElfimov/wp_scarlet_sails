@@ -16,37 +16,33 @@ Template Name: Главная страница
 		</div>
 	</section>
 	<?php include(TEMPLATEPATH . '/reviews.php'); ?>
-</main>
+
+
+
 <?php
-$id = 15; // id страницы
+$id = 142; // id страницы
 $post = get_page($id);
 $content = $post->post_content;
 echo $post->post_content;
 ?>
 
-<?php
-$imgs = get_attached_media( 'image', 48 );
-foreach($imgs as $img){
-$image_url = $img->guid;
-echo '<img src="'. $image_url .'" />';
-}
+<section class="our-partners">
+	<div class="our-partners__inner">
+		<h2 class="our-partners__title">Наши партнеры</h2>
+		<ul class="our-partners__list">
+			<?php
+			$str = get_post( 150 )->post_content;
+			preg_match_all('/src="([^"]+)"/i', $str, $matches);
+			$img_urls = $matches[1];
+						 ?>
+			 <?php foreach ($img_urls as $img_url) {?>
+				 <li class="our-partners__item">
+					 <img src="<?php echo $img_url; ?>" alt="" />
+				 </li>
+			 <?php } ?>
+	 </ul>
+	 </div>
+</section>
 
-
-
-$media = get_attached_media( 'image', 48 );
-print_r( $media );
-
-?>
-
-
-<?php $str= get_the_content();
-preg_match_all('/src="([^"]+)"/i', $str, $matches);
-$img_urls = $matches[1]; ?>
-<?php if($img_urls) { ?>
-<ul class="gallery">
-<? foreach ($img_urls as $img_url) {?>
-<li><a href="<?php echo $img_url; ?>" rel="prettyPhoto[cat-<?php echo $post->ID; ?>]" title="<?php the_title(); ?>"><img src="<?php echo $img_url; ?>" alt="" /></a></li>
-<?php }} ?>
-</ul>
-
+</main>
 <?php get_footer(); ?>
