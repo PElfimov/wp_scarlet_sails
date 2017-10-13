@@ -19,7 +19,7 @@ function scarlet_sails_scripts_styles(){
 
     wp_enqueue_script( 'popup', get_template_directory_uri() . '/js/popup.js', array(), '1.0', true);
     wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js', array(), '1.0', true);
-    // wp_enqueue_script( 'tubular', get_template_directory_uri() . '/js/jquery.tubular.1.0.js', array(), '1.0', true);
+    wp_enqueue_script( 'tubular', get_template_directory_uri() . '/js/jquery.tubular.1.0.js', array(), '1.0', true);
     wp_enqueue_script( 'video', get_template_directory_uri() . '/js/index.js', array(), '1.0', true);
     wp_enqueue_script( 'move', get_template_directory_uri() . '/js/move.js', array(), '1.0', true);
     }

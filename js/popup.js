@@ -14,6 +14,7 @@ var consultationform = document.querySelector(".order-form--consultation");
 
 
 link.addEventListener("click", function(event) {
+  console.log('Нажата кнопка');
   event.preventDefault();
   popup.classList.add("modal-content--show");
   user.focus();
