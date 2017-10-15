@@ -1,3 +1,4 @@
+var uri = $('#google-container').attr('data-uri');
 var popupthenks = document.querySelector(".modal-content--thanks");
 
 function callorder() {
@@ -28,7 +29,7 @@ function callconcult() {
   var orderbtn = popup.querySelector(".order-form__btn");
   $.ajax({
     type: 'POST',
-    url: 'php/send.php',
+    url: uri + '/php/send.php',
     data: msg,
     success: function(data) {
       $('#results').html(data);
