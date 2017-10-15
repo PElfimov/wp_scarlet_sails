@@ -7,7 +7,7 @@ function callorder() {
   var orderbtn = popupOrder.querySelector(".order-form__btn");
   $.ajax({
     type: 'POST',
-    url: 'php/send.php',
+    url: uri + '/php/send.php',
     data: msg,
     success: function(data) {
       $('#results').html(data);
