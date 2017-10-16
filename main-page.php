@@ -31,7 +31,7 @@ echo $post->post_content;
 		<h2 class="our-partners__title">Наши партнеры</h2>
 		<ul class="our-partners__list">
 			<?php
-				$str = get_post( 150 )->post_content;
+				$str = get_post( 54 )->post_content;
 				preg_match_all('/<img[^>]+>/i', $str, $matches);
 				$img_urls = $matches[0];
 			?>
@@ -50,7 +50,7 @@ echo $post->post_content;
 		<div class="сertificates__wrapper">
 			<ul class="сertificates__list">
 				<?php
-					$str_cert = get_post( 174 )->post_content;
+					$str_cert = get_post( 71 )->post_content;
 					preg_match_all('/src="([^"]+)"/i', $str_cert, $matches);
 					$img_urls = $matches[1];
 				?>
@@ -107,7 +107,7 @@ echo $post->post_content;
 <?php get_footer(); ?>
 
 <?php
-$id = 183; // id подвала
+$id = 69; // id подвала
 $post = get_page($id);
 $content = $post->post_content;
 echo $post->post_content;
