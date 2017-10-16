@@ -77,7 +77,7 @@ echo $post->post_content;
 		<input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
 		<label class="order-form__checkbox">
 				<input type="checkbox" name="personal-data" required>
-				Я соглашаюсь на передачу персональных данных согласно <a href="termsofuse.html">пользовательскому соглашению</a> и <a href="politic.html">политике конфиденциальности данного сайта</a>
+				Я соглашаюсь на передачу персональных данных согласно <a href="<?php echo get_permalink(330); ?>">пользовательскому соглашению</a> и <a href="<?php echo get_permalink(332); ?>">политике конфиденциальности данного сайта</a>
 			</label>
 		<input type="hidden" name="formname" value="Заказ шоу">
 		<button class="btn order-form__btn" type="submit">Заказать</button>
@@ -92,7 +92,7 @@ echo $post->post_content;
 		<input class="order-form__input" type="tel" name="phone" placeholder="Ваш телефон" required>
 		<label class="order-form__checkbox">
 					<input type="checkbox" name="personal-data" required>
-					Я соглашаюсь на передачу персональных данных согласно <a href="termsofuse.html">пользовательскому соглашению</a> и <a href="politic.html">политике конфиденциальности данного сайта</a>
+					Я соглашаюсь на передачу персональных данных согласно <a href="<?php echo get_permalink(330); ?>">пользовательскому соглашению</a> и <a href="<?php echo get_permalink(332); ?>">политике конфиденциальности данного сайта</a>
 				</label>
 		<input type="hidden" name="formname" value="Консультация">
 		<button class="btn order-form__btn" type="submit">Заказать</button>
